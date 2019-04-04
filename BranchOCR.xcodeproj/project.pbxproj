@@ -16,7 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		07B2ABC0DAB6B0753A6FACCD /* Pods-BranchOCR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BranchOCR.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BranchOCR/Pods-BranchOCR.debug.xcconfig"; sourceTree = "<group>"; };
 		490875530E6FA8DEF47CD89D /* Pods_BranchOCR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BranchOCR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		61B880A7B9BE6DC41FC2BA76 /* Pods-BranchOCR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BranchOCR.release.xcconfig"; path = "Pods/Target Support Files/Pods-BranchOCR/Pods-BranchOCR.release.xcconfig"; sourceTree = "<group>"; };
 		6CC3B1D0B87DB6B25B267C34 /* Pods-BranchOCR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BranchOCR.release.xcconfig"; path = "Target Support Files/Pods-BranchOCR/Pods-BranchOCR.release.xcconfig"; sourceTree = "<group>"; };
 		8C425E05224574CF0059166C /* BranchOCR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BranchOCR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C425E08224574CF0059166C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +86,8 @@
 			children = (
 				E9F48795E9035F54F7164A3D /* Pods-BranchOCR.debug.xcconfig */,
 				6CC3B1D0B87DB6B25B267C34 /* Pods-BranchOCR.release.xcconfig */,
+				07B2ABC0DAB6B0753A6FACCD /* Pods-BranchOCR.debug.xcconfig */,
+				61B880A7B9BE6DC41FC2BA76 /* Pods-BranchOCR.release.xcconfig */,
 			);
 			name = Pods;
 			path = Pods;
@@ -188,8 +192,10 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BranchOCR/Pods-BranchOCR-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-BranchOCR/Pods-BranchOCR-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GPUImage/GPUImage.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftOCR/SwiftOCR.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -197,11 +203,13 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GPUImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftOCR.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BranchOCR/Pods-BranchOCR-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BranchOCR/Pods-BranchOCR-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -356,7 +364,7 @@
 		};
 		8C425E18224574D10059166C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E9F48795E9035F54F7164A3D /* Pods-BranchOCR.debug.xcconfig */;
+			baseConfigurationReference = 07B2ABC0DAB6B0753A6FACCD /* Pods-BranchOCR.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -375,7 +383,7 @@
 		};
 		8C425E19224574D10059166C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6CC3B1D0B87DB6B25B267C34 /* Pods-BranchOCR.release.xcconfig */;
+			baseConfigurationReference = 61B880A7B9BE6DC41FC2BA76 /* Pods-BranchOCR.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
