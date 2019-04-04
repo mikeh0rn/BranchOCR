@@ -1,24 +1,90 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MUP-M3-Ba4">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Text Detection-->
+        <scene sceneID="yJ0-8l-MPK">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController id="RYc-pI-3FW" customClass="ViewController" customModule="Text_Detection_Starter_Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="S6S-oH-27r"/>
+                        <viewControllerLayoutGuide type="bottom" id="6XG-YQ-1p1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Dth-zl-zp7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8Eo-sH-lxY">
+                                <rect key="frame" x="0.0" y="64" width="375" height="527"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yqy-DI-5jJ">
+                                <rect key="frame" x="0.0" y="599" width="375" height="68"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Words ">
+                                        <attributes>
+                                            <color key="NSColor" red="0.91805601120000002" green="0.29896932840000001" blue="0.2010047734" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="29" name="SFMono-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Letters">
+                                        <attributes>
+                                            <color key="NSColor" red="0.033137437729999997" green="0.34795832570000002" blue="0.85755076139999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="29" name="SFMono-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <constraints>
+                            <constraint firstItem="Yqy-DI-5jJ" firstAttribute="top" secondItem="8Eo-sH-lxY" secondAttribute="bottom" constant="8" id="CVu-Dg-7gJ"/>
+                            <constraint firstItem="8Eo-sH-lxY" firstAttribute="top" secondItem="S6S-oH-27r" secondAttribute="bottom" id="DSM-Eu-Uzz"/>
+                            <constraint firstItem="6XG-YQ-1p1" firstAttribute="top" secondItem="Yqy-DI-5jJ" secondAttribute="bottom" id="LsC-xZ-qj2"/>
+                            <constraint firstAttribute="trailing" secondItem="8Eo-sH-lxY" secondAttribute="trailing" id="Oh5-KC-KOP"/>
+                            <constraint firstItem="Yqy-DI-5jJ" firstAttribute="top" secondItem="8Eo-sH-lxY" secondAttribute="bottom" constant="8" id="bmr-xk-Ia8"/>
+                            <constraint firstItem="Yqy-DI-5jJ" firstAttribute="leading" secondItem="Dth-zl-zp7" secondAttribute="leading" id="e9M-wV-Stk"/>
+                            <constraint firstItem="8Eo-sH-lxY" firstAttribute="leading" secondItem="Dth-zl-zp7" secondAttribute="leading" id="phT-lf-Xuw"/>
+                            <constraint firstAttribute="trailing" secondItem="Yqy-DI-5jJ" secondAttribute="trailing" id="yEx-Mj-krn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="YRx-yy-gZe"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Text Detection" largeTitleDisplayMode="always" id="g2S-fs-j6Q"/>
+                    <connections>
+                        <outlet property="imageView" destination="8Eo-sH-lxY" id="V7f-QD-tyG"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3UC-KQ-HYj" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1255" y="139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="2o4-Ir-uH6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MUP-M3-Ba4" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0ak-Sc-bdQ">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="RYc-pI-3FW" kind="relationship" relationship="rootViewController" id="4lK-NP-X8P"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bBx-fc-pB0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="475.19999999999999" y="138.53073463268368"/>
         </scene>
     </scenes>
 </document>
